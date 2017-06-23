@@ -53,8 +53,6 @@ app.use(function(req, res, next){
     next();
 });
 
-// TODO AUTOINCREMENT
-
 // Models
 User = require('./models/user');
 Sample = require('./models/sample');
@@ -66,3 +64,9 @@ var sample = require('./routes/sample_route');
 // declaire things in app.use
 app.use('/this/route', things);
 app.use('/this/sample', sample);
+
+app.use(function(err, req, res, next){
+  res.status(500);
+  res.json({ "data": null, "Error": err.message });
+});
+
