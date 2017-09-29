@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "snyk test"
+    "test": "snyk test",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": "",
   "license": "ISC",
@@ -12,9 +14,9 @@
     "body-parser": "^1.17.2",
     "express": "*",
     "mongoose": "^4.10.6",
-    "mongoose-auto-increment": "^5.0.1"
+    "mongoose-auto-increment": "^5.0.1",
+    "snyk": "^1.41.1"
   },
-  "devDependencies": {
-    "snyk": "^1.36.0"
-  }
+  "devDependencies": {},
+  "snyk": true
 }
